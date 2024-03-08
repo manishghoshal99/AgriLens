@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='/Product.css')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="manifest" href="static/site.webmanifest">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+</head>
+<body id ="google_element">
+<header>
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    <a href="{{url_for('home')}}" class="logo">LENS<span>FLEUR</span></a>
+    <nav class="navbar">
+        <a href="{{url_for('home')}}" style = "font-family:'Lato'">HOME</a>
+        <a href="#of" style = "font-family:'Lato'">ORGANIC PRODUCTS</a>
+        <a href="#inof" style = "font-family:'Lato'">INORGANIC FERTILIZERS</a>
+        <a href="#ini" style = "font-family:'Lato'">INORGANIC INSECTICIDES</a>
+        <a href="#inop" style = "font-family:'Lato'">INORGANIC PESTICIDES</a>
+    </nav>
+    <a class="buttonvoice" id = "myButton" onclick="speak()">
+        <span class="fa fa-microphone" style="font-size: 25px; padding: 11px;"> </span>
+        <span class="textvoice">SCREEN READER</span>
+      </a>
+</header>
+ 
+<h1 class="heading"></h1>
+
+<section class="products" id="of">
+<h1 class="heading" style = "font-family:'Bebas Neue'"> Organic <span style = "font-family:'Bebas Neue'">Products</span> </h1>
+<div class="container">
+    <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/of1.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Ugaoo Cow Manure</h2>
+            <p class="date">It is made from animal excreta(cow dung & goat droppings). Cattle Manure is a good source of nitrogen and organic carbon while goat manure is rich in nitrogen and potash.</p>
+            <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </div>
+    <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/of2.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Greenfield GroChar Compost</h2>
+            <p class="date">It is organic matter decomposed through composting. The organic matter used here can be vegetable and plant waste, animal excreta.</p>
+        <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+    </div>
+    <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/of3.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Trust Basket Vermi Compost</h2>
+            <p class="date">It is a product of organic material degradation using various species of worms, to create a heterogeneous mixture of decomposing food waste.</p>
+        <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+</section>
+
+<section class="products" id="inof">
+<h1 class="heading" style = "font-family:'Bebas Neue'"> Inorganic <span style = "font-family:'Bebas Neue'">Fertilizers</span> </h1>
+<div class="container">
+    <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/if1.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Nagarjuna Urea 46% N</h2>
+            <p class="date">Nagarjuna Urea 46% N is a nitrogenous inorganic fertilizer manufactured by Nagarjuna Fertilizers and Chemicals Limited in India. It contains 46% nitrogen and is widely used in agriculture to enhance crop yield and growth.</p>
+            <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </div>
+    <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/if2.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Essential Food NPK</h2>
+            <p class="date">Essential Food NPK fertilizer is a balanced inorganic fertilizer containing three essential nutrients: nitrogen (N), phosphorus (P), and potassium (K). It is used in agriculture to provide plants with the necessary nutrients for healthy growth and improved crop yield.</p>
+        <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+    </div>
+        <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/if3.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">IFFCO Potassium Nitrate</h2>
+            <p class="date">Benefits Suitable for all crops Increase grain size and fruit weight Increase shining of produce, oil content in oilseed crops. Increase plant resistance against pest and diseases Helps to resist abiotic stresses like frost, drought, etc.</p>
+        <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="products" id="ini">
+<h1 class="heading" style = "font-family:'Bebas Neue'"> Inorganic <span style = "font-family:'Bebas Neue'">Insecticides</span> </h1>
+<div class="container">
+    <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/ip1.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Lamdox-Lamdacyhalothrin 5% EC Insecticides</h2>
+            <p class="date">It is organic matter decomposed through composting. The organic matter used here can be vegetable and plant waste, animal excreta.</p>
+        <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+    </div>
+        <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/ip2.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Leaf Curling Insect And Pest Killer Liquid Pesticide (500 ml)</h2>
+            <p class="date">Leaf Curling Insect and Pest Killer Liquid Pesticide is a 500 ml solution designed to eliminate insect pests that cause leaf curling and other plant deformities. It contains potent active ingredients that are effective against aphids, whiteflies, thrips, and other insect pests that infest plants.</p>
+        <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+    </div>
+    <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/ip3.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">FAS Chlorpyrifos 20% EC Insecticide</h2>
+            <p class="date">FAS Chlorpyrifos 20% EC is an insecticide containing 20% chlorpyrifos as its active ingredient. It is effective against a wide range of pests and is commonly used in agriculture to control insects in crops such as cotton, soybeans, and citrus.</p>
+        <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+</section>
+
+<section class="products" id="inop">
+<h1 class="heading" style = "font-family:'Bebas Neue'"> Inorganic <span style = "font-family:'Bebas Neue'">Pesticides</span> </h1>
+<div class="container">
+    <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/ii1.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Delegate Insecticide</h2>
+            <p class="date">It is Spinosin class insecticide with long-lasting and broad-spectrum control of insect pests in a variety of crops. Delegate Insecticide provides control of thrips and Lepidopteran pests in cotton, chili soybean, and corn.</p>
+            <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </div>
+    <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/ii2.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Basf Maiore Pesticicde</h2>
+            <p class="date">MAIORE is a novel Chemistry that saps energy out of insects, there by rendering them weak. It contains Chlorfenapyr 10% SC</p>
+        <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+    </div>
+        <div class="card-1 card-div">
+        <div class="like-icon-div">
+            <label for="card-1-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-1-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="gow-img-div img-div">
+            <img src="{{url_for('static',filename='/ii3.png')}}">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Saaf Fungicide</h2>
+            <p class="date">A proven & classic fungicide with systemic & contact action. Most trusted & widely used dual mode of action fungicide
+                It's a cost effective and proven fungicide with both Systemic & Contact action.</p>
+        <div class="pricing-and-cart">
+                <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+    </div>
+</section>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+    function loadGoogleTranslate()
+    {
+        new google.translate.TranslateElement("google_element");
+    }
+</script>
+<script>
+    let msg = new SpeechSynthesisUtterance();
+let voices = speechSynthesis.getVoices();
+msg.voice = voices[0];
+let tags = document.querySelectorAll('p,a,h1,h2,h3,h4,h5,h6,div'); // add more tags for you project
+const myButton = document.getElementById("myButton");
+function speak(){
+    tags.forEach((tag) => {
+        tag.addEventListener('click', (e) => {
+            
+            msg.text = e.target.innerText;
+            tag.style.backgroundColor = "none";
+            speechSynthesis.speak(msg);
+            
+            let interval = setInterval(() => {
+                if(!speechSynthesis.speaking){
+                    tag.style.removeProperty('background-color');
+                    clearInterval(interval);
+                }
+            }, 100);
+            
+        });
+    });
+    alert("Screen Reader Activated");
+};
+</script>
+</body>
+</html>

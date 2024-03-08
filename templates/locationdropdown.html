@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>Region > Country > Division</title>
+<script>
+    var countries = Object();
+
+countries['Asia'] = '|Bangladesh|Bhutan|Brunei|Burma (Myanmar)|Cambodia|China|East Timor|India|Indonesia|Japan|Kazakhstan|Korea (north)|Korea (south)|Laos|Malaysia|Maldives|Mongolia|Nepal|Philippines|Russian Federation|Singapore|Sri Lanka|Taiwan|Thailand|Vietnam';
+
+
+////////////////////////////////////////////////////////////////////////////
+
+var city_states = Object();
+
+city_states['India'] = '|New Delhi||Andaman/Nicobar Islands|Andhra Pradesh|Arunachal Pradesh|Assam|Bihar|Chandigarh|Chhattisgarh|Dadra/Nagar Haveli|Daman/Diu|Goa|Gujarat|Haryana|Himachal Pradesh|Jammu/Kashmir|Jharkhand|Karnataka|Kerala|Lakshadweep|Madhya Pradesh|Maharashtra|Manipur|Meghalaya|Mizoram|Nagaland|Orissa|Pondicherry|Punjab|Rajasthan|Sikkim|Tamil Nadu|Tripura|Uttaranchal|Uttar Pradesh|West Bengal';
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+function setRegions()
+{
+	
+		document.write('<option value=" Asia  ">' + "Asia"+ '</option>');
+}
+
+function set_country(oRegionSel, oCountrySel, oCity_StateSel)
+{
+	var countryArr;
+	oCountrySel.length = 0;
+	oCity_StateSel.length = 0;
+	var region = oRegionSel.options[oRegionSel.selectedIndex].text;
+	if (countries[region])
+	{
+		oCountrySel.disabled = false;
+		oCity_StateSel.disabled = true;
+		oCountrySel.options[0] = new Option('SELECT COUNTRY','');
+		countryArr = countries[region].split('|');
+		for (var i = 0; i < countryArr.length; i++)
+			oCountrySel.options[i + 1] = new Option(countryArr[i], countryArr[i]);
+		document.getElementById('txtregion').innerHTML = region;
+		document.getElementById('txtplacename').innerHTML = '';
+	}
+	else oCountrySel.disabled = true;
+}
+
+function set_city_state(oCountrySel, oCity_StateSel)
+{
+	var city_stateArr;
+	oCity_StateSel.length = 0;
+	var country = oCountrySel.options[oCountrySel.selectedIndex].text;
+	if (city_states[country])
+	{
+		oCity_StateSel.disabled = false;
+		oCity_StateSel.options[0] = new Option('SELECT NEAREST DIVISION','');
+		city_stateArr = city_states[country].split('|');
+		for (var i = 0; i < city_stateArr.length; i++)
+			oCity_StateSel.options[i+1] = new Option(city_stateArr[i],city_stateArr[i]);
+		document.getElementById('txtplacename').innerHTML = country;
+	}
+	else oCity_StateSel.disabled = true;
+}
+
+function print_city_state(oCountrySel, oCity_StateSel)
+{
+	var country = oCountrySel.options[oCountrySel.selectedIndex].text;
+	var city_state = oCity_StateSel.options[oCity_StateSel.selectedIndex].text;
+	if (city_state && city_states[country].indexOf(city_state) != -1)
+		document.getElementById('txtplacename').innerHTML = city_state ;
+}
+</script>
+</head>
+<body>
+<div id="widget">
+<form>
+Region&raquo; <select onchange="set_country(this,country,city_state)" size="1" name="region">
+<option value="" selected="selected">SELECT REGION</option>
+<option value=""></option>
+<script type="text/javascript">
+setRegions(this);
+</script>
+</select>
+Country&raquo; <select name="country" size="1" disabled="disabled" onchange="set_city_state(this,city_state)"></select>
+City/State&raquo; <select name="city_state" size="1" disabled="disabled" onchange="print_city_state(country,this)"></select>
+</form>
+<div id="txtregion"></div>
+<div id="txtplacename"></div>
+</div>
+</body>
+</html>
